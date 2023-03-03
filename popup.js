@@ -1,10 +1,9 @@
 const NUM_OF_RESPONSES = 3;
 
-const getCurrentTab = async () => {
-  let queryOptions = { active: true };
-  let [tab] = await chrome.tabs.query(queryOptions);
-  return tab;
-}
+// const copyClipboard = (elementId) => {
+//   const textToCopy = document.getElementById(elementId).textContent;
+//   navigator.clipboard.writeText(textToCopy);
+// }
 
 const injectContentScript = async (tab) => {
   try {

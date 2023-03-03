@@ -3,22 +3,20 @@ const getMostUsedElems = () => {
   const NUM_OF_RESPONSES = 3;
 
   const allElements = [...document.body.getElementsByTagName("*")];
-  const allStyles = allElements.map(el => window.getComputedStyle(el));
-
-  const allColors = allStyles
-    .map(style => {
-      return {
-        fontColor: style.color,
-        fontFamily: style.fontFamily,
-        bgColor: style.backgroundColor
-      }
-    });
+  const allStyles = allElements.map(el => {
+    const elem = window.getComputedStyle(el);
+    return {
+      fontColor: elem.color,
+      fontFamily: elem.fontFamily,
+      bgColor: elem.backgroundColor
+    }
+  });
 
   const fontColorCounts = {};
   const fontFamilyCounts = {};
   const bgColorCounts = {};
 
-  allColors.forEach(({
+  allStyles.forEach(({
     fontColor,
     fontFamily,
     bgColor
