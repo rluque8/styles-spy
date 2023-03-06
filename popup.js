@@ -1,10 +1,5 @@
 const NUM_OF_RESPONSES = 3;
 
-// const copyClipboard = (elementId) => {
-//   const textToCopy = document.getElementById(elementId).textContent;
-//   navigator.clipboard.writeText(textToCopy);
-// }
-
 const injectContentScript = async (tab) => {
   try {
     const { id } = tab;

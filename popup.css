@@ -13,7 +13,8 @@ body {
 
 .text {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-content: center;
 }
 
 .number {
