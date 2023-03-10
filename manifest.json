@@ -1,12 +1,9 @@
 {
   "manifest_version": 3,
   "name": "Style Detector",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "Get the most used colors and font families of any website",
   "permissions": ["activeTab", "scripting"],
-  "background": {
-    "service_workers": ["background.js"]
-  },
   "host_permissions": ["<all_urls>"],
   "action": {
     "default_popup": "popup.html",
